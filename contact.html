@@ -51,11 +51,11 @@
                 </div>
                 <div class="col-lg-3 row-cols-1 text-center mb-2 mb-lg-0">
                     <div class="d-inline-flex align-items-center" style="height: 45px;">
-                        <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href="https:///www.x.com/sapphirevoyage" target=_blank><i class="fab fa-twitter fw-normal text-secondary"></i></a>
-                        <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href="https:///www.facebook.com/sapphirevoyageofficial" target=_blank><i class="fab fa-facebook-f fw-normal text-secondary"></i></a>
-                        <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href="https://www.linkedin.com/company/sapphirevoyage/"target=_blank><i class="fab fa-linkedin-in fw-normal text-secondary"></i></a>
-                        <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href="https:///www.instagram.com/sapphirevoyageofficial"target=_blank><i class="fab fa-instagram fw-normal text-secondary"></i></a>
-                        <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href="https:///www.youtube.com/@sapphirevoyageofficial"target=_blank><i class="fab fa-youtube fw-normal text-secondary"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href="https:///www.x.com/sapphirevoyage" target="_blank"><i class="fab fa-twitter fw-normal text-secondary"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href="https:///www.facebook.com/sapphirevoyageofficial" target="_blank"><i class="fab fa-facebook-f fw-normal text-secondary"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href="https://www.linkedin.com/company/sapphirevoyage/" target="_blank"><i class="fab fa-linkedin-in fw-normal text-secondary"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href="https:///www.instagram.com/sapphirevoyageofficial" target="_blank"><i class="fab fa-instagram fw-normal text-secondary"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href="https:///www.youtube.com/@sapphirevoyageofficial" target="_blank"><i class="fab fa-youtube fw-normal text-secondary"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 text-center text-lg-end">
@@ -130,7 +130,14 @@
                     <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
                     <li class="breadcrumb-item"><a href="#" class="text-white">Pages</a></li>
                     <li class="breadcrumb-item active text-secondary">Contact</li>
-                </ol>    
+                </ol>
+                <style type="text/css">
+    #contactForm .help-block ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+</style>    
             </div>
         </div>
         <!-- Header End -->
@@ -197,56 +204,36 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 wow fadeInRight" data-wow-delay="0.3">
-                        <div class="sub-style">
-                            <h5 class="sub-title text-primary pe-3">Let’s Connect</h5>
-                        </div>
-                        <h1 class="display-5 mb-4">Send Your Message</h1>
-                        <p class="mb-3"><a class="text-primary fw-bold" href=""></a>.</p>
-                        <form>
-                            <div class="row g-4">
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="phone" class="form-control" id="phone" placeholder="Phone">
-                                        <label for="phone">Your Phone</label>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-xl-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="project" placeholder="Project">
-                                        <label for="project">Your Project</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                        <label for="subject">Subject</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 160px"></textarea>
-                                        <label for="message">Message</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <button class="btn btn-primary w-100 py-3">Send Message</button>
-                                </div>
-                            </div>
-                      </form>
-                    </div>
+                    <div class="contact-form">
+    <div id="alertMessage"></div>
+    <form id="contactForm" novalidate="novalidate">
+        <div class="row">
+            <div class="col-sm-6 control-group">
+                <input type="text" class="form-control py-2" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
+                <p class="help-block text-danger"></p>
+            </div>
+            <div class="col-sm-6 control-group">
+                <input type="email" class="form-control py-2" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
+                <p class="help-block text-danger"></p>
+            </div>
+            
+            <div class="col-sm-12 control-group">
+                <input type="text" class="form-control py-2" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
+                <p class="help-block text-danger"></p>
+            </div>
+            <div class="col-12 control-group">
+                <textarea class="form-control" rows="4" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
+                <p class="help-block text-danger"></p>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary w-100 py-2" type="submit" id="sendMessageButton">
+                    <span>Send Message</span>
+                    <div class="d-none spinner-border spinner-border-sm text-light ms-3" role="status"></div>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
                 </div>
                 <div class="office pt-5">
                     <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -257,7 +244,7 @@
                         <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat deleniti amet at atque sequi quibusdam cumque itaque repudiandae temporibus, eius nam mollitia voluptas maxime veniam necessitatibus saepe in ab? Repellat!</p>
                     </div>
                     <div class="row g-4 justify-content-center">
-                        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s" style="visibility: hidden; animation-delay: 0.1s; animation-name: none;">
                             <div class="office-item p-4">
                                 <div class="office-img mb-4">
                                     <img src="img/office-1.jpg" class="img-fluid w-100 rounded" alt="">
@@ -270,7 +257,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
                             <div class="office-item p-4">
                                 <div class="office-img mb-4">
                                     <img src="img/office-2.jpg" class="img-fluid w-100 rounded" alt="">
@@ -283,7 +270,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s" style="visibility: hidden; animation-delay: 0.5s; animation-name: none;">
                             <div class="office-item p-4">
                                 <div class="office-img mb-4">
                                     <img src="img/office-3.jpg" class="img-fluid w-100 rounded" alt="">
@@ -296,7 +283,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s" style="visibility: hidden; animation-delay: 0.7s; animation-name: none;">
                             <div class="office-item p-4">
                                 <div class="office-img mb-4">
                                     <img src="img/office-4.jpg" class="img-fluid w-100 rounded" alt="">
@@ -329,7 +316,7 @@
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
                             <h4 class="text-secondary mb-4">Contact Info</h4>
-                            <a href=""><i class="fa fa-map-marker-alt me-2"></i>  Office no 109, Al Assalah Towers (A), Sultan Qaboos St, Muscat Oman.</a>
+                            <a href=""><i class="fa fa-map-marker-alt me-2"></i> Office no 109, Al Assalah Towers (A), Sultan Qaboos St, Muscat Oman.</a>
                             <a href=""><i class="fas fa-envelope me-2"></i> infosapphirevoyage@gmail.com</a>
                             <a href=""><i class="fas fa-phone me-2"></i> +968 7874 1142</a>
                             <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +968 7874 1142</a>
@@ -379,13 +366,17 @@
                                 <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">SignUp</button>
                             </div>
                         </div>
+                        <!-- Contact Form Javascript -->
+<script src="mailer/validation.form.js"></script>
+<script src="mailer/contact.form.js"></script>
+
                     </div>
                 </div>
             </div>
         </div>
         <!-- Footer End -->
         
-       <!-- Copyright Start -->
+        <!-- Copyright Start -->
         <div class="container-fluid copyright py-4">
             <div class="container">
                 <div class="row g-4 align-items-center">
@@ -396,7 +387,7 @@
                         <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
                         <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
                         <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                        Designed By <a class="border-bottom text-white" href="https://sapphirevoyage.com/">Kaka Soft</a>
+                        Designed By <a class="border-bottom text-white" href="https://htmlcodex.com">HTML Codex</a>
                     </div>
                 </div>
             </div>
